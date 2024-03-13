@@ -1,27 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    font-family: "Laila", serif;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .icons {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    border: 1px;
+  }
+  .btn {
+    border-radius: 5px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: white;
+  }
+  .w-margin {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .I-image {
+    position: absolute;
+  }
+  .font-laila {
+    font-family: "Laila", serif;
+  }
+ .navbar-active{
+    @apply opacity-30 z-30;
+ } 
+ .small-header{
+    @apply my-10 text-xl font-laila font-semibold text-primary;
+ }
+ .large-header{
+    @apply mb-8 text-5xl font-bold font-laila text-[#173648];
+ }
+ .paragraph{
+    @apply  mb-8 text-base text-[#555555] ;
+ }
+ .gloves-div{
+    @apply flex flex-col justify-center items-center w-52;
+ }
 }
